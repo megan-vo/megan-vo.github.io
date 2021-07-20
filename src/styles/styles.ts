@@ -10,8 +10,18 @@ const colors = {
 const GlobalStyles = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+    html {
+        min-width: 300px;
+    }
+
     body {
-        font-family: 'Open Sans'
+        font-family: 'Open Sans';
+        margin: 0
+    }
+
+    #root {
+        min-width: 300px;
     }
 
     h1 {
@@ -19,13 +29,16 @@ const GlobalStyles = createGlobalStyle`
     }
 `;
 
+const SiteContainer = styled.div`
+  width: 100%;
+`;
+
 const HeaderContainer = styled.div`
   box-sizing: border-box;
   padding: 5rem 3rem;
-  width: 60%;
 
   @media only screen and ${devices.sm} {
-    width: 100%;
+    max-width: 60%;
   }
 `;
 
@@ -42,4 +55,4 @@ const QuickLinks = styled.a`
   }
 `;
 
-export { GlobalStyles, HeaderContainer, QuickLinks };
+export { GlobalStyles, SiteContainer, HeaderContainer, QuickLinks };

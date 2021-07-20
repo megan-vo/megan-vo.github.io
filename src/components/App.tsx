@@ -1,14 +1,14 @@
 import React from 'react';
-import { GlobalStyles } from '../styles/styles';
+import { GlobalStyles, SiteContainer } from '../styles/styles';
 import { Header } from './Header';
 
 export default class App extends React.Component<any, any> {
   render() {
     return (
-      <div>
+      <SiteContainer>
         <GlobalStyles />
         <Header />
-      </div>
+      </SiteContainer>
     );
   }
 }
