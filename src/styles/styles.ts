@@ -77,6 +77,11 @@ const Section = styled.div`
 
   .section-title {
     padding: 0rem 1rem;
+    text-align: center;
+
+    @media screen and ${devices.xs} {
+      text-align: left;
+    }
   }
 `;
 
