@@ -3,7 +3,6 @@ import devices from './breakpoints';
 
 const colors = {
   orange: '#E8A87C',
-  lightBlue: '#85DCB',
   teal: '#41b3A3'
 };
 
@@ -144,6 +143,58 @@ const WorkCardImg = styled.div`
   }
 `;
 
+const MusicCardContainer = styled.div`
+  display: grid;
+  padding: 2rem 1rem;
+  grid-template-rows: 0.5fr 1fr;
+  border-bottom: 1px solid lightgray;
+  border-radius: 20px;
+
+  @media screen and ${devices.xs} {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
+const MusicCardContent = styled.div`
+  text-align: center;
+  padding: 5% 0;
+
+  @media screen and ${devices.xs} {
+    text-align: left;
+  }
+`;
+
+const MusicCardImg = styled.div`
+  justify-self: center;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    width: 10em;
+    height: auto;
+  }
+
+  svg {
+    height: 1.3rem;
+    position: absolute;
+    top: 40%;
+    left: 5em;
+    opacity: 60%;
+
+    &:hover {
+      opacity: 100%;
+    }
+  }
+
+  @media screen and ${devices.xs} {
+    justify-self: right;
+  }
+`;
+
 export {
   GlobalStyles,
   SiteContainer,
@@ -152,5 +203,8 @@ export {
   Section,
   WorkCard,
   WorkCardContent,
-  WorkCardImg
+  WorkCardImg,
+  MusicCardContainer,
+  MusicCardContent,
+  MusicCardImg
 };

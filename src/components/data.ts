@@ -2,6 +2,12 @@ import { ProjectCardProps } from './interactive-projects/ProjectCard';
 import idyllStudioGif from '../assets/gifs/idyll-studio.gif';
 import parametricPressGif from '../assets/gifs/atfoatm.gif';
 import beatBasicsGif from '../assets/gifs/beat-basics.gif';
+import pigsImg from '../assets/images/pigs.png';
+import pigsAudio from '../assets/music/melancholic_funk.wav';
+import waltzImg from '../assets/images/waltz.png';
+import waltzAudio from '../assets/music/waltz.m4a';
+import trainImg from '../assets/images/train.png';
+import trainAudio from '../assets/music/7pm.wav';
 import { MusicCardProps } from './music-projects/MusicCard';
 
 const PROJECTS: ProjectCardProps[] = [
@@ -42,26 +48,30 @@ const PROJECTS: ProjectCardProps[] = [
 ];
 
 const MUSIC_PROJECTS: MusicCardProps[] = [
-  //   {
-  //     title: 'Waltz for Teka',
-  //     description: 'A song of gratitude. An attempt at a waltz',
-  //     img: '',
-  //     alt: '8 bit artwork'
-  //   },
+  {
+    title: 'Waltz for Teka',
+    description: 'A song of gratitude. An attempt at a waltz',
+    img: waltzImg,
+    audio: new Audio(waltzAudio),
+    link: 'https://soundcloud.com/solenye/waltz-for-teka',
+    alt: '8 bit artwork'
+  },
   {
     title: "Pig's Gotta Fly",
     description: 'Recorded on my iPhone one rainy day in Seattle',
-    img: '../assets/images/pigs.png',
-    audio: '../assets/music/melancholic_funk.wav',
-    alt: 'Artwork of a plane by the sea by Sydnie Vo'
+    img: pigsImg,
+    audio: new Audio(pigsAudio),
+    alt: 'Artwork of a plane by the sea by Sydnie Vo',
+    link: 'https://soundcloud.com/solenye/pigs-gotta-fly'
+  },
+  {
+    title: '7pm',
+    description: 'A collaborative ode to the best time of day',
+    img: trainImg,
+    audio: new Audio(trainAudio),
+    link: 'https://soundcloud.com/solenye/7pm',
+    alt: 'Artwork of a girl by a train station by Sydnie Vo'
   }
-  //   {
-  //     title: '7pm',
-  //     description:
-  //       'An ode to my favorite time of the day. In collaboration with the talented Tyler Mi',
-  //     img: '',
-  //     alt: 'Artwork of a girl by a train station by Sydnie Vo'
-  //   }
 ];
 
 export { PROJECTS, MUSIC_PROJECTS };
