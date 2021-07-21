@@ -13,6 +13,10 @@ const GlobalStyles = createGlobalStyle`
 
     html {
         min-width: 300px;
+
+        @media screen and ${devices.lg} {
+          font-size: 18px;
+        }
     }
 
     body {
@@ -22,27 +26,37 @@ const GlobalStyles = createGlobalStyle`
 
     #root {
         min-width: 300px;
+        display: flex;
     }
 
-    h1 {
-        font-family: 'Lato'
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lato';
+        margin: 0;
     }
 `;
 
 const SiteContainer = styled.div`
   width: 100%;
+  padding: 0rem 3rem;
 `;
 
 const HeaderContainer = styled.div`
-  box-sizing: border-box;
-  padding: 5rem 3rem;
+  padding: 5rem 0rem;
+
+  h1 {
+    margin: 2rem 0rem;
+  }
+
+  strong {
+    color: ${colors.orange};
+  }
 
   @media only screen and ${devices.sm} {
     max-width: 60%;
   }
 `;
 
-const QuickLinks = styled.a`
+const QuickLink = styled.a`
   color: gray;
   margin-right: 1em;
 
@@ -55,4 +69,88 @@ const QuickLinks = styled.a`
   }
 `;
 
-export { GlobalStyles, SiteContainer, HeaderContainer, QuickLinks };
+const Section = styled.div`
+  margin-top: 2rem;
+
+  .cards {
+    margin-top: 2rem;
+  }
+
+  .section-title {
+    padding: 0rem 1rem;
+  }
+`;
+
+const WorkCard = styled.div`
+  border-bottom: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 3rem;
+
+  @media only screen and ${devices.sm} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+`;
+
+const WorkCardContent = styled.div`
+  .content {
+    margin-top: 1rem;
+  }
+
+  .extra-info {
+    margin-top: 1rem;
+  }
+
+  .links {
+    margin-top: 1rem;
+  }
+
+  h3 {
+    margin-bottom: 0.4rem;
+  }
+
+  h5 {
+    font-weight: 300;
+  }
+
+  p {
+    font-size: 0.8em;
+    margin: 0;
+  }
+
+  a {
+    font-size: 0.8em;
+  }
+
+  @media screen and ${devices.med} {
+    padding-top: 5%;
+  }
+`;
+
+const WorkCardImg = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 75%;
+    height: auto;
+  }
+
+  @media screen and ${devices.sm} {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+`;
+
+export {
+  GlobalStyles,
+  SiteContainer,
+  HeaderContainer,
+  QuickLink,
+  Section,
+  WorkCard,
+  WorkCardContent,
+  WorkCardImg
+};
