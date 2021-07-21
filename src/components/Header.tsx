@@ -23,6 +23,10 @@ export const Header = (): JSX.Element => {
         I like to learn about <strong>writing, music, and technology,</strong>{' '}
         and figuring out how to use those mediums to create things for others.
       </p>
+      <p>
+        I'm currently based in Seattle, but you can find me around other parts
+        of the web below.
+      </p>
 
       <div>
         {links.map((link: LinkProps) => (

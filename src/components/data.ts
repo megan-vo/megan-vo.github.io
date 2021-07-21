@@ -38,7 +38,7 @@ const PROJECTS: ProjectCardProps[] = [
     title: 'Beat Basics: An Explorable Explanation',
     subtitle: 'Explorables Jam, 2018',
     summary:
-      'A fun little interactive explanation differentiating 3/4 and 6/8 rhythms for desktop',
+      'A fun little interactive explanation for desktop differentiating 3/4 and 6/8 rhythms',
     responsibilities: 'Writing, interactive graphics',
     tools: 'React, Idyll',
     img: beatBasicsGif,
