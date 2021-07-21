@@ -1,5 +1,6 @@
 import React from 'react';
 import { HeaderContainer, QuickLink } from '../styles/styles';
+import resume from '../assets/pdf/resume_website_2021.pdf';
 
 interface LinkProps {
   href: string;
@@ -8,7 +9,8 @@ interface LinkProps {
 
 const links: LinkProps[] = [
   { href: 'https://github.com/megan-vo', name: 'Github' },
-  { href: 'https://www.linkedin.com/in/megan-vo-5b9031216/', name: 'LinkedIn' }
+  { href: 'https://www.linkedin.com/in/megan-vo-5b9031216/', name: 'LinkedIn' },
+  { href: resume, name: 'Resume' }
 ];
 
 export const Header = (): JSX.Element => {
